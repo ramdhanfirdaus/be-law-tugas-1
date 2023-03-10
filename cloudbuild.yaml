@@ -1,24 +1,22 @@
 steps:
   # Build the jar file
-  - name: 'gcr.io/cloud-builders/gradle'
-    args: ['wrapper', '--gradle-version=7.3.3']
-  - name: 'gcr.io/cloud-builders/gradle'
+  - name: 'docker.io/library/gradle:7.4.0-jdk17'
     args: ['build']
 
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/my-gcp-project/my-app:v1', '.']
+    args: ['build', '-t', 'gcr.io/sturdy-torch-380223/my-app:v1', '.']
 
   # Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/my-gcp-project/my-app:v1']
+    args: ['push', 'gcr.io/sturdy-torch-380223/my-app:v1']
 
   # Deploy the app to App Engine
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [
       'app',
       'deploy',
-      '--image-url=gcr.io/my-gcp-project/my-app:v1',
+      '--image-url=gcr.io/sturdy-torch-380223/my-app:v1',
       '--version=1',
       '--no-promote'
     ]
