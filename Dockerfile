@@ -1,5 +1,5 @@
 # Base image
-FROM gradle:7.3.3-jdk11-alpine
+FROM gradle:7.4.0-jdk17
 
 # Set working directory
 WORKDIR /app

@@ -1,6 +1,6 @@
 steps:
   # Build the jar file
-  - name: 'gradle:7.3.3-jdk11-alpine'
+  - name: 'gradle:7.4.0-jdk17'
     args: ['gradle', 'build']
 
   # Build the Docker image
