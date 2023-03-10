@@ -1,7 +1,7 @@
 steps:
   # Build the jar file
-  - name: 'docker.io/library/gradle:7.4.0-jdk17'
-    args: ['build']
+  - name: 'gradle:7.4.0-jdk17'
+    args: ['gradle', 'build']
 
   # Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
