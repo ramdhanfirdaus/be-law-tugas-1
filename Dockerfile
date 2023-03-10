@@ -5,7 +5,7 @@ FROM gradle:7.4.0-jdk17
 WORKDIR /app
 
 # Copy jar file to container
-COPY build/libs/*.jar app.jar
+COPY build/libs/*.jar /app/
 
 # Expose port 8080
 EXPOSE 8080
