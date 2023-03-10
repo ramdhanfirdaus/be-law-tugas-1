@@ -1,5 +1,5 @@
 # Base image
-FROM openjdk:17-jre-slim
+FROM gradle:7.4-17-jre-slim
 
 # Set working directory
 WORKDIR /app
