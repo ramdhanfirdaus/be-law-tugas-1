@@ -18,5 +18,6 @@ steps:
       'deploy',
       '--image-url=gcr.io/sturdy-torch-380223/my-app:v1',
       '--version=1',
-      '--no-promote'
+      '--no-promote',
+      '--no-use-image'
     ]
