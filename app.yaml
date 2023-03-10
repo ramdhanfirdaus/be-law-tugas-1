@@ -2,3 +2,7 @@ runtime: java17
 instance_class: F1
 env_variables:
   SPRING_APPLICATION_NAME: "sturdy-torch-380223"
+spring:
+  jpa:
+    closeEntityManager: false
+    close-entity-manager-factory: false
