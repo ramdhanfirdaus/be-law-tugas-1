@@ -1,0 +1,4 @@
+spring:
+  jpa:
+    closeEntityManager: false
+    close-entity-manager-factory: false
