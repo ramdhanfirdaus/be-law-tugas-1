@@ -1,6 +1,8 @@
 steps:
   # Build the jar file
   - name: 'gcr.io/cloud-builders/gradle'
+    args: ['wrapper', '--gradle-version=7.3.3']
+  - name: 'gcr.io/cloud-builders/gradle'
     args: ['build']
 
   # Build the Docker image
